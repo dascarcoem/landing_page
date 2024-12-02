@@ -37,3 +37,21 @@ body {
   align-items: center;
 }
 
+.hover-bullet::before {
+  content: '';
+  position: absolute;
+  left: -30px; 
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 12px; 
+  height: 12px;
+  background-color: black;
+  border-radius: 50%; 
+  /* transition: all 3s ease ; */
+  transition: opacity 3s ease, visibility 3s ease;
+}
+
+.hover-bullet:hover::before {
+  display: block;
+}
