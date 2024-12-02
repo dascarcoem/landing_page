@@ -75,16 +75,16 @@ const OpenedNavbar = ({setIsOpen}) => {
     <div className='w-full h-screen center fixed z-50 center bg-white flex flex-col justify-center items-center '  >
         <Image  src='/icons/close.png' height={60} width={60}  alt='close navbar' className='fixed right-6 lg:right-16 top-6 lg:top-16' onClick={() => setIsOpen(false)} />
         <div className='w-full' >
-          <div className='h-full flex flex-row justify-center gap-10' >
-            <div className=' h-full relative' >
+          <div className='h-full flex flex-row justify-start mx-10 lg:mx-0 lg:justify-center gap-10' >
+            <div className=' h-full hidden lg:block  relative' >
               <Image src='/images/home.png' height={450} width={450} alt='logo' className='rounded-3xl ' />
               {/* <Image src={NavData[active].imgPath} height={50} width={50} alt='logo' className='rounded-3xl ' /> */}
             </div>
-            <div className='grid lg:grid-cols-2 lg:grid-flow-row-dense '  >
+            <div className='grid grids-col-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-7 lg:gap-0 '  >
               {
                 NavData.map((item)=>{
                   return(
-                    <div key={item.id} className={`${item.id==active? 'text-black' : 'text-slate-500'} hover:text-black hover:translate-x-10  hover-bullet relative text-2xl md:text-3xl lg:text-6xl font-bold  flex justify-start items-center cursor-pointer `} onClick={() => handleNavigation(item.id)} >
+                    <div key={item.id} className={`${item.id==active? 'text-black' : 'text-slate-500'} hover:text-black hover:translate-x-10  hover-bullet relative text-3xl md:text-4xl lg:text-6xl font-bold  flex justify-start items-center cursor-pointer `} onClick={() => handleNavigation(item.id)} >
                         {item.title}
                     </div>
                   )

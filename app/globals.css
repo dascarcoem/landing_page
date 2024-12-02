@@ -48,10 +48,13 @@ body {
   height: 12px;
   background-color: black;
   border-radius: 50%; 
-  /* transition: all 3s ease ; */
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 3s ease, visibility 3s ease;
 }
 
 .hover-bullet:hover::before {
+  opacity: 1;
+  visibility: visible;
   display: block;
 }
