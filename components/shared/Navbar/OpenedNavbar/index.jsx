@@ -3,6 +3,7 @@
 import { redirect } from 'next/dist/server/api-utils';
 import Image from 'next/image'
 import React from 'react'
+// import Default from '@/public/images/default.jpg'
 
 const NavData = [
   { 
@@ -77,7 +78,7 @@ const OpenedNavbar = ({setIsOpen}) => {
         <div className='w-full' >
           <div className='h-full flex flex-row justify-start mx-10 lg:mx-0 lg:justify-center gap-10' >
             <div className=' h-full hidden lg:block  relative' >
-              <Image src='/images/home.png' height={450} width={450} alt='logo' className='rounded-3xl ' />
+              <Image src={NavData[active].imgPath || '/images/default.jpg' } height={450} width={450} alt='logo' className='rounded-3xl ' />
               {/* <Image src={NavData[active].imgPath} height={50} width={50} alt='logo' className='rounded-3xl ' /> */}
             </div>
             <div className='grid grids-col-1 lg:grid-cols-2 lg:grid-flow-row-dense gap-7 lg:gap-0 '  >
