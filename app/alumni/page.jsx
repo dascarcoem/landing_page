@@ -4,7 +4,6 @@ import Tab from '@/components/alumni/Tab'
 import React from 'react'
 
 const tempData = [{ imgPath: '/cover.jpg', name: "John Doe", role: "SDE", company: "ABC" }, { imgPath: '/cover.jpg', name: "Jane Smith", role: "SDE", company: "XYZ" }]
-
 const Alumni = () => {
   return (
     <main className='pt-40 flex flex-col' >
