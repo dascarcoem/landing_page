@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "motion/react";
 import { container, item } from "@/utils/animations";
 import Image from "next/image";
+import { FlipText } from "@/components/ui/FlipText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,10 +51,17 @@ const Hero = () => {
           className="scroll-inner h-screen w-[300vw] flex relative"
         >
           <div className="relative w-screen h-full flex flex-col justify-center items-center gap-6  text-5xl lg:text-[220px] pl-[calc(100vw*0.1)]  px-[calc(100vw*0.2)]">
-            <div className="w-full self-start">Hey,</div>
-            <div>There</div>
+          <motion.div
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="w-full self-start"
+    >
+      Hey,
+    </motion.div>
+            <FlipText word="There" />
             <motion.div
-              className=" absolute bottom-0  right-14 lg:-right-32 overflow-x-auto  h-1/2 flex justify-center items-end gap-20"
+              className=" absolute bottom-0  right-14 lg:-right-28 overflow-x-auto  h-1/2 flex justify-center items-end gap-20"
               variants={container}
               initial="hidden"
               animate="visible"
