@@ -1,6 +1,8 @@
 'use client'
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+// import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion , useScroll , useTransform} from "motion/react";
+
 
 const ScaleUp = () => {
   const { scrollYProgress } = useScroll();
