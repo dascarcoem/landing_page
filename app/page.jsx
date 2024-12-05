@@ -1,5 +1,5 @@
 import Hero from "@/components/home/Hero";
-import MeteorsSection from "@/components/home/Meteors";
+import MeteorsSection from "@/components/home/MeteorsSection";
 import Objectives from "@/components/home/Objectives";
 import OurDomains from "@/components/home/OurDomains";
 import Partners from "@/components/home/Partners/indes";
