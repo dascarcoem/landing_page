@@ -8,7 +8,7 @@ const Objectives = () => {
     initial={{ scale: 0 , x:300 , y:-300 }}
     animate={{ scale: 1 , x:0 , y:0 }}    
     className='relative w-full h-screen center bg-white z-10 '  >
-    <Logo />
+    {/* <Logo /> */}
       Objectives
     </motion.div>
   )

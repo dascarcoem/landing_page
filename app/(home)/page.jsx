@@ -1,5 +1,6 @@
+import Coz from "@/components/home/Coz";
 import Hero from "@/components/home/Hero";
-import MeteorsSection from "@/components/home/Meteors";
+import MeteorsSection from "@/components/home/MeteorsSection";
 import Objectives from "@/components/home/Objectives";
 import OurDomains from "@/components/home/OurDomains";
 import Partners from "@/components/home/Partners/indes";
@@ -14,6 +15,7 @@ export default function Home() {
       <OurDomains />
       <Partners />
       <Vision />
+      <Coz />
     </main>
   );
 }

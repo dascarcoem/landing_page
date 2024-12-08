@@ -6,9 +6,9 @@ import { HyperText } from '@/components/ui/HyperText';
 
 const Hero = () => {
   return (
-    <div className='relative w-full h-screen  bg-[#001011] ' >
+    <div className='relative w-full h-screen  bg-[#001011] ' id='hero' >
         <img alt='Home Background'  className=' !absolute object-cover overflow-visible top-0 md:right-0 !h-full  -rotate-[135deg] md:rotate-0 ' src='/Home/home-bg.png' />
-        <div className='relative lg:fixed w-full lg:w-2/3 h-full flex flex-col items-center justify-center lg:ml-[calc(100vw*0.05)] z-0' >
+        <div className='fixed w-full lg:w-2/3 h-full flex flex-col items-center justify-center lg:ml-[calc(100vw*0.05)] z-0' >
           <motion.h1
           initial={{ scale: 0 , x:300 , y:-300 }} 
           animate={{ scale: 1 , x:0 , y:0 }}
