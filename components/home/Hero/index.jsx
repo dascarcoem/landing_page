@@ -1,63 +1,30 @@
-"use client"
-import React, { useRef } from 'react'
-import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react"
-import Image from 'next/image';
-
+'use client'
+// import Image from 'next/image'
+import React from 'react'
+import { motion } from "motion/react";
+import { HyperText } from '@/components/ui/HyperText';
 
 const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  })
-  const scaleImg = useTransform(scrollYProgress, [0, 0.35], [1, 0.5]);
-  const opacity = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
-  const scaleText = useTransform(scrollYProgress, [0, 0.35], [1, 3]);
-  const translateLeft = useTransform(scrollYProgress, [0, 0.2, 1], [-3200, -3200, 3200])
-  const translateRight = useTransform(scrollYProgress, [0, 0.2, 1], [3200, 3200, -3200])
-
-  const imgLeft = ['/images/home.png', '/images/home.png', '/images/home.png', '/images/home.png']
-  const imgRight = ['/images/default.jpg', '/images/default.jpg', '/images/default.jpg', '/images/default.jpg']
-  // useMotionValueEvent(scrollYProgress, "change", (latest) => {
-  //   console.log("Page scroll: ", latest)
-  // })
   return (
-    <div ref={ref} className='flex flex-col items-center relative bg-black h-[600vh]'>
-      <div className='top-52 sticky w-full overflow-x-clip'>
-        <motion.div style={{ scale: scaleImg, opacity }}>
-          <Image
-            src='/images/default.jpg'
-            height={450}
-            width={450}
-            alt="logo"
-            className="mx-auto rounded-3xl"
-          />
-        </motion.div>
-        <motion.div
-          style={{ scale: scaleText, opacity }}
-          className='text-blue-500 text-[calc(100vw*0.2)] top-1/2 text-center w-full absolute'
-        >
+    <div className='relative w-full h-screen  bg-[#001011] ' >
+      <img alt='Home Background' className=' !absolute object-cover overflow-visible top-0 md:right-0 !h-full  -rotate-[135deg] md:rotate-0 ' src='/Home/home-bg.png' />
+      <div className='relative lg:fixed w-full lg:w-2/3 h-full flex flex-col items-center justify-center lg:ml-[calc(100vw*0.05)] z-0' >
+        <motion.h1
+          initial={{ scale: 0, x: 300, y: -300 }}
+          animate={{ scale: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className=' text-[60px] md:text-[100px] lg:text-[200px]' >
+          {/* className=' text-[60px] md:text-[100px] lg:text-[200px] border-2 border-blue-400 ' > */}
           DASCA
-        </motion.div>
-      </div>
-      <div className='mt-[70vh] overflow-x-hidden sticky top-0'>
-        <motion.div style={{ translateX: translateLeft }} className='py-10 overflow-x-hidden'>
-          <ImgTabRow imgs={imgRight} />
-        </motion.div>
-        <motion.div style={{ translateX: translateRight }} className='py-10 overflow-x-hidden'>
-          <ImgTabRow imgs={imgLeft} />
-        </motion.div>
+        </motion.h1>
+        {/* <HyperText text='Data for good' className='w-full relative text-left self-start text-[20px] lg:text-[40px] lg:-top-5 lg:-left-20 '  duration={1000} /> */}
+        <HyperText text='Making Every Byte Count for Good' className='relative lg:-top-5 text-left self-start text-[15px]  md:text-[20px] lg:text-[40px] ' />
+        <p className=' text-[15px]  md:text-[20px] lg:text-[40px]' >
+
+        </p>
+
       </div>
     </div>
   )
 }
-
-export default Hero
-
-const ImgTabRow = ({ imgs }) => {
-  return (
-    <div className='grid grid-cols-4 overflow-x-hidden px-10 *:px-5'>
-      {imgs.map((src, i) => <Image key={i} src={src} height={450} width={450} alt="logo" className="rounded-3xl" />)}
-    </div>
-  )
-}
+export default Hero;
