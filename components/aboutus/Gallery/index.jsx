@@ -1,6 +1,7 @@
 "use client"
 import React, { useRef } from 'react'
-import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react"
+// import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react"
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion"
 import Image from 'next/image';
 
 
