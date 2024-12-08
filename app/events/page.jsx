@@ -1,11 +1,12 @@
-import React from 'react'
+// /event/hero/page.jsx
+import Hero from './hero/hero';
 
-const Events = () => {
+const Page = () => {
   return (
-    <main className='w-screen flex-col' >
-      Events
-    </main>
-  )
-}
+    <div>
+      <Hero />
+    </div>
+  );
+};
 
-export default Events
+export default Page;
