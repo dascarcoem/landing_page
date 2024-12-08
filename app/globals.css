@@ -2,18 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* outline: 2px solid red; */
 }
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -41,14 +37,14 @@ body {
 .hover-bullet::before {
   content: '';
   position: absolute;
-  left: -30px; 
+  left: -30px;
   top: 50%;
   transform: translateY(-50%);
   display: none;
-  width: 12px; 
+  width: 12px;
   height: 12px;
   background-color: black;
-  border-radius: 50%; 
+  border-radius: 50%;
   opacity: 0;
   visibility: hidden;
   transition: opacity 3s ease, visibility 3s ease;
@@ -58,4 +54,10 @@ body {
   opacity: 1;
   visibility: visible;
   display: block;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
