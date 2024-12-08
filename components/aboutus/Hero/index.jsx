@@ -3,8 +3,6 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { motion } from "motion/react";
-import Image from "next/image";
 import Hero1 from "./Hero1";
 import Hero2 from "./Hero2";
 import Hero3 from "./Hero3";

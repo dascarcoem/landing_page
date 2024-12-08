@@ -5,7 +5,7 @@ import { usePathname, useRouter } from 'next/navigation';
 
 const NavData = [
   { id: 0, title: 'Home', link: '/', imgPath: '/images/home.png' },
-  { id: 1, title: 'Achievement', link: '/achievement', imgPath: '/images/default.jpg' },
+  { id: 1, title: 'Achievement', link: '/achievements', imgPath: '/images/default.jpg' },
   { id: 2, title: 'About Us', link: '/aboutus', imgPath:'/images/home.png' },
   { id: 3, title: 'Alumni', link: '/alumni', imgPath: '/images/default.jpg' },
   { id: 4, title: 'Events', link: '/events', imgPath: '/images/home.png' },
