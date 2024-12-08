@@ -41,7 +41,7 @@ const Hero = () => {
           {/* Hero Section */}
           <div
             className="relative w-screen h-full flex flex-col justify-center items-center gap-6 text-5xl lg:text-[220px] pl-[calc(100vw*0.1)] px-[calc(100vw*0.2)] bg-cover bg-center"
-            style={{ backgroundImage: "url('/path/to/your/background-image.jpg')" }}
+            
           >
           
             <motion.div
