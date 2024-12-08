@@ -56,7 +56,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
-              className="text-center text-white text-[20px] lg:text-[30px] w-full mt-10  text-justify"
+              className=" text-white text-[20px] lg:text-[30px] w-full mt-10  text-justify"
             >
               Our chapter brings the Data Science community together with a wide range of fun and exciting events! From team-building activities and casual hangouts to light-hearted competitions, we create a space where learning meets enjoyment. While we do offer occasional technical workshops, our main focus is on creating memorable experiences that foster connections and inspire creativity. Join us for an unforgettable time with peers who share your passion for fun and innovation!
             </motion.div>
