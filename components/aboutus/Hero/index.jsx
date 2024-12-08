@@ -4,17 +4,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { motion } from "motion/react";
-import { container, item } from "@/utils/animations";
 import Image from "next/image";
-import { FlipText } from "@/components/ui/FlipText";
+import Hero1 from "./Hero1";
+import Hero2 from "./Hero2";
+import Hero3 from "./Hero3";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const imageData = [
-  { src: "/AboutUs/Hero/0.svg", alt: "Vote Illustration 0" },
-  { src: "/AboutUs/Hero/1.svg", alt: "Vote Illustration 1" },
-  { src: "/AboutUs/Hero/4.svg", alt: "Vote Illustration 4" },
-];
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -50,77 +45,9 @@ const Hero = () => {
           ref={sectionRef}
           className="scroll-inner h-screen w-[300vw] flex relative"
         >
-          <div className="relative w-screen h-full flex flex-col justify-center items-center gap-6  text-5xl lg:text-[220px] pl-[calc(100vw*0.1)]  px-[calc(100vw*0.2)]">
-          <motion.div
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-      className="w-full self-start"
-    >
-      Hey,
-    </motion.div>
-            <FlipText word="There" />
-            <motion.div
-              className=" absolute bottom-0  right-14 lg:-right-28 overflow-x-auto  h-1/2 flex justify-center items-end gap-20"
-              variants={container}
-              initial="hidden"
-              animate="visible"
-            >
-              {imageData.map((image, index) => (
-                <motion.img
-                  key={index}
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-5/6"
-                  variants={item}
-                />
-              ))}
-            </motion.div>
-          </div>
-          <div className="relative w-screen h-full flex flex-col justify-center items-center gap-6  text-5xl lg:text-[130px] ">
-          <motion.div
-              className="absolute top-16 lg:top-24 right-16 lg:right-24"
-              animate={{
-                y: [0, 0, 0], // Moves up
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Image
-                src="/AboutUs/Hero/fire.png"
-                height={150}
-                width={150}
-                alt="Fire Illustration"
-              />
-            </motion.div>{" "}
-            <div className="w-full self-start">Want to</div>
-            <div>Know More</div>
-            <div className="w-full self-end text-right">About Us</div>
-          </div>
-          <div className="w-screen h-full  center text-5xl lg:text-[180px] relative">
-            Explore Now!
-            <motion.div
-              className="absolute bottom-16 lg:bottom-24 right-16 lg:right-24"
-              animate={{
-                y: [0, -50, 0], // Moves up
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Image
-                src="/AboutUs/Hero/down.png"
-                height={150}
-                width={150}
-                alt="Down Arrow for navigation"
-              />
-            </motion.div>{" "}
-          </div>
+          <Hero1 />
+          <Hero2 />
+          <Hero3 />
         </div>
       </div>
     </div>
