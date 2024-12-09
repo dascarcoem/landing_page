@@ -30,7 +30,7 @@ const Footer = () => {
         {/* Section 1: Join Us */}
         <div className="footer-section flex flex-col items-center md:items-start border-r-2 border-white">
           <h4 className="text-2xl font-semibold mb-4">Join Us</h4>
-          <p className="text-lg mb-4">Follow us on social media:</p>
+          <p className="text-lg mb-4 folow">Follow us on social media:</p>
           <div className="icons flex space-x-4">
             <a
               href="https://facebook.com"
@@ -70,16 +70,19 @@ const Footer = () => {
         {/* Section 2: Divider */}
         <div className="footer-section flex flex-col items-center  border-r-2 border-white text-center">
           <h4 className="text-2xl text-center font-semibold mb-4">Contact Us</h4>
-          <p className="text-lg mb-2">
+          <div className="border-b-2">
+          <p className="text-lg mb-2  ">
             Email:{" "}
             <a
               href="mailto:support@dasca.org"
-              className="hover:text-blue-400 transition"
+              className=" email hover:text-blue-400 transition"
             >
-              support@dasca.org
+              dasca@rknec.edu
             </a>
+           
           </p>
-          <p className="text-xs mt-6">© All rights reserved by DASCA</p>
+          </div>
+          <p className="text-lg mt-6">© All rights reserved by DASCA</p>
         </div>
 
         {/* Section 3: Designed & Developed */}
