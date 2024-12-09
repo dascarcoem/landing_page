@@ -1,7 +1,9 @@
 import React from "react";
 import { FlipText } from "@/components/ui/FlipText";
 import { container, item } from "@/utils/animations";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
+import { motion } from 'framer-motion'
+
 
 const imageData = [
     { src: "/AboutUs/Hero/0.svg", alt: "Vote Illustration 0" },
