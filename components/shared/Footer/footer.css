@@ -20,10 +20,11 @@ body {
     line-height: 40px; /* Ensure the text is vertically centered */
     font-size: 1.5em; /* Adjust icon font size relative to the link size */
     display: block;
+   
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    border: 3px solid #fff;
+    border: 2px solid black;
     transition: transform 0.3s;
   }
   
@@ -87,4 +88,19 @@ body {
   .email:hover{
     transform: rotateX(360deg);
 
+  }
+  
+  .email::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #60a5fa;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .email:hover::after {
+    width: 100%; /* Expands the underline on hover */
   }

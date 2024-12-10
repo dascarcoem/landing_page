@@ -20,16 +20,16 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-10 relative overflow-hidden"
+      className="w-full  bg-white text-black py-10 relative overflow-hidden border-t-2 h-72 items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* Footer Grid */}
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 items-center">
         {/* Section 1: Join Us */}
-        <div className="footer-section flex flex-col items-center md:items-start border-r-2 border-white">
-          <h4 className="text-2xl font-semibold mb-4">Join Us</h4>
+        <div className="footer-section flex flex-col items-center md:items-start  h-5/6">
+          <h4 className="text-3xl font-semibold mb-4 join">Join Us</h4>
           <p className="text-lg mb-4 folow">Follow us on social media:</p>
           <div className="icons flex space-x-4">
             <a
@@ -68,28 +68,32 @@ const Footer = () => {
         </div>
 
         {/* Section 2: Divider */}
-        <div className="footer-section flex flex-col items-center  border-r-2 border-white text-center">
-          <h4 className="text-2xl text-center font-semibold mb-4">Contact Us</h4>
-          <div className="border-b-2">
+        <div className="footer-section flex flex-col items-center  border-r-2  border-l-2 border-black  text-center h-full">
+          <div className="border-b-2 border-black w-3/4 h-full p-1">
+          <h4 className="text-3xl text-center font-semibold mb-4">Contact Us</h4>
+          <div className=" pb-2">
           <p className="text-lg mb-2  ">
             Email:{" "}
             <a
               href="mailto:support@dasca.org"
-              className=" email hover:text-blue-400 transition"
+              className=" email hover:text-blue-400 transition text-lg"
             >
               dasca@rknec.edu
             </a>
            
           </p>
           </div>
-          <p className="text-lg mt-6">© All rights reserved by DASCA</p>
+          </div>
+          <div>
+          <p className="text-xl mt-8 ">© All rights reserved by    <span className="text-blue-400"><b>DASCA</b></span></p>
+          </div>
         </div>
 
         {/* Section 3: Designed & Developed */}
-        <div className="footer-section flex flex-col items-center ">
-          <h4 className="text-2xl font-semibold mb-4">Designed & Developed</h4>
+        <div className="footer-section flex flex-col items-center justify-start">
+          <h4 className="text-3xl font-semibold mb-4">Designed & Developed</h4>
           <p className="text-lg">
-            Built with precision and excellence by <strong>DASCA</strong>.
+            Built with precision and excellence by <span className="text-blue-400"><b>DASCA</b></span>.
           </p>
         </div>
       </div>
