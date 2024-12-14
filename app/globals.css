@@ -8,6 +8,10 @@
   box-sizing: border-box;
   /* outline: 2px solid red; */
 }
+:root {
+  --background: #171717;
+  --foreground: #ffffff;
+}
 
 ::-webkit-scrollbar {
   display: none;

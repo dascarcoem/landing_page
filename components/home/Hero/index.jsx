@@ -1,7 +1,8 @@
 'use client'
 // import Image from 'next/image'
 import React from 'react'
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { HyperText } from '@/components/ui/HyperText';
 
 const Hero = () => {
@@ -18,10 +19,7 @@ const Hero = () => {
           DASCA
         </motion.h1>
         {/* <HyperText text='Data for good' className='w-full relative text-left self-start text-[20px] lg:text-[40px] lg:-top-5 lg:-left-20 '  duration={1000} /> */}
-        <HyperText text='Making Every Byte Count for Good' className='relative lg:-top-5 text-left self-start text-[15px]  md:text-[20px] lg:text-[40px] ' />
-        <p className=' text-[15px]  md:text-[20px] lg:text-[40px]' >
-
-        </p>
+        <HyperText text='Making Every Byte Count for Good' className='relative lg:-top-3 text-left self-start text-[15px]  md:text-[20px] lg:text-[40px] ' />
 
       </div>
     </div>
