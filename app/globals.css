@@ -65,3 +65,109 @@ body {
     --radius: 0.5rem;
   }
 }
+/* Basic Reset */
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+.icn {
+  color: black;
+  font-size: 1.5em; /* Adjusted to ensure icons scale well */
+  transition: 0.5s;
+}
+
+/* Styling for each social media link */
+.icons a {
+  width: 40px; /* Adjust the width to desired size */
+  height: 40px; /* Adjust the height to desired size */
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px; /* Ensure the text is vertically centered */
+  font-size: 1.5em; /* Adjust icon font size relative to the link size */
+  display: block;
+ 
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid black;
+  transition: transform 0.3s;
+}
+
+/* Icon size relative to the anchor */
+.icons a .icn {
+  position: relative;
+  color: #262626;
+  transition: 0.5s;
+  z-index: 3;
+  font-size: 1em; /* Ensure the icon size is appropriate */
+}
+
+/* Hover effect for icon */
+.icons a:hover .icn {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+/* Hover effect for the background color change */
+.icons a:hover::before {
+  top: 0;
+}
+
+/* Before pseudo-element for background hover effect */
+.icons a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+/* Background colors for each social media icon */
+.icons a:nth-child(1)::before {
+  background: #3b5999; /* Facebook */
+}
+
+.icons a:nth-child(2)::before {
+  background: #55acee; /* Twitter */
+}
+
+.icons a:nth-child(3)::before {
+  background: #0077b5; /* LinkedIn */
+}
+
+.icons a:nth-child(4)::before {
+  background: #dd4b39; /* Instagram */
+}
+
+.email{
+  display: inline-block;
+  transition: transform 10s ease-in-out;
+  transform-style: preserve-3d;
+
+}
+
+.email:hover{
+  transform: rotateX(360deg);
+
+}
+
+.email::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #60a5fa;
+  transition: width 0.3s ease-in-out;
+}
+
+.email:hover::after {
+  width: 100%; /* Expands the underline on hover */
+}
