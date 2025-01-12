@@ -5,24 +5,16 @@ import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/index";
 
-// interface HyperTextProps {
-//   text: string;
-//   duration?: number;
-//   framerProps?: Variants;
-//   className?: string;
-//   animateOnLoad?: boolean;
-// }
-
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 export function HyperText({
   text,
-  duration = 300,
+  duration = 2, // Total animation duration in seconds
   framerProps = {
     initial: { opacity: 0, y: -10 },
-    animate: { opacity: 1, y: 0  },
+    animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: 3 },
   },
   className,
@@ -39,37 +31,39 @@ export function HyperText({
   };
 
   useEffect(() => {
-    const interval = setInterval(
-      () => {
-        if (!animateOnLoad && isFirstRender.current) {
-          clearInterval(interval);
-          isFirstRender.current = false;
-          return;
-        }
-        if (interations.current < text.length) {
-          setDisplayText((t) =>
-            t.map((l, i) =>
-              l === " "
-                ? l
-                : i <= interations.current
-                  ? text[i]
-                  : alphabets[getRandomInt(26)],
-            ),
-          );
-          interations.current = interations.current + 0.1;
-        } else {
-          setTrigger(false);
-          clearInterval(interval);
-        }
-      },
-      duration / (text.length * 10),
-    );
+    const totalIterations = text.length; // Total characters to animate
+    const intervalTime = (duration * 1000) / totalIterations; // Time per iteration
+
+    const interval = setInterval(() => {
+      if (!animateOnLoad && isFirstRender.current) {
+        clearInterval(interval);
+        isFirstRender.current = false;
+        return;
+      }
+
+      if (interations.current < totalIterations) {
+        setDisplayText((t) =>
+          t.map((l, i) =>
+            l === " "
+              ? l
+              : i <= interations.current
+              ? text[i]
+              : alphabets[getRandomInt(26)]
+          )
+        );
+        interations.current++;
+      } else {
+        setTrigger(false);
+        clearInterval(interval);
+      }
+    }, intervalTime);
+
     return () => clearInterval(interval);
   }, [text, duration, trigger, animateOnLoad]);
 
   return (
     <div
-      className="flex scale-100 cursor-default overflow-hidden "
+      className="flex scale-100 cursor-default overflow-hidden"
       onMouseEnter={triggerAnimation}
     >
       <AnimatePresence mode="wait">

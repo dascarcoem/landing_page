@@ -23,8 +23,9 @@ const Logo = ({ isDark }) => {
       }`}
     >
       <div className="flex flex-col">
-        <h1 className="text-[20px] md:text-[20px] lg:text-[40px] font-medium">DASCA</h1>
-        <p className='text-[8px] md:text-[15px] lg:text-[18px]' >Making Every Byte Count for Good</p>
+        <h1 className="text-[20px] md:text-[20px] lg:text-[40px] font-medium leading-none">DASCA</h1>
+        {/* <p className='text-[8px] md:text-[15px] lg:text-[18px]' >Making Every Byte Count for Good</p> */}
+        <p className='text-[8px] md:text-[15px] lg:text-[18px]' >Data Science Association</p>
       </div>
     </aside>
   );
