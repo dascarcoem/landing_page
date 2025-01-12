@@ -114,7 +114,7 @@ export const eventType = defineType({
       name: 'guidelines',
       type:'array',
       of: [{type: 'block'}],
-      group: 'event-page-details ',
+      group: 'event-page-details',
     }),
   ],
 })

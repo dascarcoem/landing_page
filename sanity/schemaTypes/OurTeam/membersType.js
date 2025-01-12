@@ -13,7 +13,6 @@ export const membersType = defineType({
     defineField({
       name: 'slug',
       type: 'slug',
-      group: 'basic',
       description: 'The slug ( part of the url - for better seo - use it for dynamic named routing ( i.e design single template page for every event ) ) for the event',
       options: { source: 'name' }, 
       hidden: ({document}) =>  !document?.name ,
