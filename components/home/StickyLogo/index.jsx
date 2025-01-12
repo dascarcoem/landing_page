@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 const Logo = ({ isDark }) => {
@@ -22,6 +23,7 @@ const Logo = ({ isDark }) => {
         isDark ? 'text-white' : 'text-black'
       }`}
     >
+      {/* <Image src="/images/dasca-logo.png" width={100} height={100} alt="DASCA Logo" /> */}
       <div className="flex flex-col">
         <h1 className="text-[20px] md:text-[20px] lg:text-[40px] font-medium leading-none">DASCA</h1>
         {/* <p className='text-[8px] md:text-[15px] lg:text-[18px]' >Making Every Byte Count for Good</p> */}

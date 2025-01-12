@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className=" px-3 md:px-10 lg:px-16 w-full  bg-white text-black py-10 relative overflow-hidden border-t-2 h-72 items-center"
+      className=" px-3 md:px-10 lg:px-16 w-full  bg-white text-black py-10 relative overflow-hidden border-t-2 h-72 items-center rounded-t-lg"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
