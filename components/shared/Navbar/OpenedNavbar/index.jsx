@@ -9,16 +9,16 @@ const NavData = [
   { id: 2, title: 'About Us', link: '/aboutus', imgPath:'/images/home.png' },
   { id: 3, title: 'Alumni', link: '/alumni', imgPath: '/images/default.jpg' },
   { id: 4, title: 'Events', link: '/events', imgPath: '/images/home.png' },
+  // { id: 5, title: 'Open Source', link: '/open-source' , imgPath: '/images/default.jpg' },
   { id: 5, title: 'Login', link: '/login' , imgPath: '/images/default.jpg' },
 ];
 
 const OpenedNavbar = ({ setIsOpen }) => {
-  const pathname = usePathname(); // Get the current route
-  const router = useRouter(); // For navigation
+  const pathname = usePathname();
+  const router = useRouter();
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    // Set the default active based on the current pathname
     const matchActive = () => {
       const matchedNav = NavData.find((item) => item.link === pathname);
       if (matchedNav) setActive(matchedNav.id);
@@ -28,7 +28,7 @@ const OpenedNavbar = ({ setIsOpen }) => {
 
   const handleNavigation = (id) => {
     setActive(id);
-    router.push(NavData[id].link); // Navigate to the selected link
+    router.push(NavData[id].link); 
     setIsOpen(false);
   };
 
